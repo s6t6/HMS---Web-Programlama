@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import SignInCard from './SignInCard'
+import { useState } from 'react';
+import DoktorLogin from './pages/DoktorLogin';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [doctorId, setDoctorId] = useState(null);
+  const [doctorName, setDoctorName] = useState('');
+
+  const handleLogin = (id, name) => {
+    setDoctorId(id);
+    setDoctorName(name);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <SignInCard />
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {!doctorId ? (
+        <DoktorLogin onLogin={handleLogin} />
+      ) : (
+        <div className="container-fluid">
+          <h2>Hoşgeldiniz, Dr. {doctorName}</h2>
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
