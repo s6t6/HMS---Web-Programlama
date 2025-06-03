@@ -1,0 +1,17 @@
+### Login
+POST http://localhost:3000/api/doktor-login
+Content-Type: application/json
+
+{
+  "k_adi": "cansu0",
+  "sifre": "123"
+}
+
+### GET doktor günlük randevu
+GET http://localhost:5000/api/randevu/doktor/1/gunluk
+
+### GET doktor geçmiş randevu
+GET http://localhost:5174/api/randevu/doktor/1/gecmis
+
+### GET doktor gelecek randevu
+GET http://localhost:5174/api/randevu/doktor/1/gelecek

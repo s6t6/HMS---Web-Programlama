@@ -1,13 +1,11 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
-
 COPY . .
 
 EXPOSE 5174
 
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5174"]
+CMD ["sh", "-c", "npm ci && npm run dev -- --host 0.0.0.0 --port 5174"]

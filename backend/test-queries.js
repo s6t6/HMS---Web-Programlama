@@ -1,5 +1,7 @@
 const db =  require('./db');
 
+// DB'ye test sorgular yapmak için kullanılıyor. Önemli bir dosya değil
+
 function query(){
    const query = `
        SELECT * FROM randevu 

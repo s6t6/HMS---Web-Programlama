@@ -1,4 +1,7 @@
-const db = require('./db'); // your better-sqlite3 instance
+const db = require('./db');
+
+
+// Eski. seed.js kullanın.
 
 function seedDatabase() {
   const insertPoliklinik = db.prepare('INSERT INTO poliklinik (ad) VALUES (?)');

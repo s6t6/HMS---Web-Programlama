@@ -1,5 +1,8 @@
 const db = require('./db');
 
+
+// TODO: hasta_kayit tablosunu ekle
+
 db.exec(`
   CREATE TABLE IF NOT EXISTS hasta (
     id INTEGER PRIMARY KEY,

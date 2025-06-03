@@ -66,9 +66,9 @@ Frontend artık http://localhost:5174 adresinde çalışıyor olmalı
 
 İlk kullanımda backend klasöründe hms.db dosyası bulunmayabilir. Eğer yoksa backend dizinindeyken init-db.js scriptini çalıştırın:
 ```bash
-node .\index.js
+node .\init-db.js
 ```
 Ardından test sorguları için data yüklemek isterseniz mock-data.js scriptini çalıştırın:
 ```bash
-node .\mock-data.js
+node .\seed.js
 ```
