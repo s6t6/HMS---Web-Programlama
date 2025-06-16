@@ -46,7 +46,7 @@ const seedDoktorlar = db.transaction(() => {
 seedDoktorlar();
 
 // Hastaları ekle
-const insertHasta = db.prepare("INSERT INTO hasta (vatandas_id, ad, soyad, yas, sifre) VALUES (?, ?, ?, ?, ?)");
+const insertHasta = db.prepare("INSERT INTO hasta (vatandas_id, ad, soyad, yas) VALUES (?, ?, ?, ?)");
 const hastalar = [];
 const seedHastalar = db.transaction(() => {
   for (let i = 0; i < 50; i++) {

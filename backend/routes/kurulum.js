@@ -8,7 +8,7 @@ const router = express.Router();
 // Veritabanı şemasını oluşturan endpoint
 router.post('/init-db', (req, res) => {
     try {
-        initDb;
+        initDb();
         
         res.json({ 
             success: true, 
