@@ -14,7 +14,7 @@ const Unauthorized401 = () => {
           <p className="text-muted">
             Bunu görüntülemeye yetkiniz yok.
           </p>
-          <Button variant="primary" onClick={() => navigate("/")}>
+          <Button variant="primary" onClick={() => navigate(-3)}>
             Geri Dön
           </Button>
         </Col>

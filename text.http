@@ -15,3 +15,13 @@ GET http://localhost:5174/api/randevu/doktor/1/gecmis
 
 ### GET doktor gelecek randevu
 GET http://localhost:5174/api/randevu/doktor/1/gelecek
+
+### GET tüm poliklinikler
+
+GET http://localhost:5000/api/poliklinik/hepsi
+
+### GET giris info
+GET http://localhost:5000/api/kurulum/demo/doktor/girisInfo
+
+### GET giris info
+GET http://localhost:5000/api/hasta/ara/1
